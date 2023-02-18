@@ -1,3 +1,12 @@
+// Define mixin
+@mixin responsive($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+
+
 body{
     background: #c6f5ff;
     background: -webkit-radial-gradient(circle, #c6f5ff 0%, #a8f0ff 50%, #a0e9ff 100%);
@@ -7,3 +16,32 @@ body{
 .bg-light{
     --bs-bg-opacity:0;
 }
+.portfoliowrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include responsive(768px) {
+        grid-template-columns: 1fr;
+      }
+}
+
+.imgportfoliowrapper{
+    position: relative;
+padding: 0 20px;
+ 
+@include responsive(768px) {
+    padding: 10px 0px;
+  }
+}
+
+
+.textonimage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
