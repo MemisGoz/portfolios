@@ -29,6 +29,7 @@ body{
   position: relative;
   display: inline-block;
   margin-left: 1rem;
+  margin-right: 1rem;
   cursor: pointer;
   @include responsive(768px) {
     padding: 10px 0px;

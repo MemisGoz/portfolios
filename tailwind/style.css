@@ -20,6 +20,7 @@ body {
   position: relative;
   display: inline-block;
   margin-left: 1rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
